@@ -1,0 +1,489 @@
+{
+  "utilization-template": {
+    "order": 1,
+    "index_patterns": ["utilization-*"],
+    "settings": {},
+    "mappings": {
+      "dynamic": "strict",
+      "properties": {
+        "utilization.cpu.model": {
+          "type": "integer"
+        },
+        "utilization.summary.system-used-pct": {
+          "type": "float"
+        },
+        "utilization.cpu.bogomips": {
+          "type": "float"
+        },
+        "utilization.cpu.hypervisor-vendor": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "utilization.cpu.stepping": {
+          "type": "integer"
+        },
+        "utilization.cpu.total-cores": {
+          "type": "integer"
+        },
+        "utilization.cpu.mhz": {
+          "type": "float"
+        },
+        "utilization.processor.family": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "utilization.temperature.package-id-1-c": {
+          "type": "float"
+        },
+        "agent.name": {
+          "type": "keyword",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "utilization.memory.total-gb": {
+          "type": "float"
+        },
+        "utilization.processor.manufacturer": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "utilization.system.uuid": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "utilization.memory.active-kb": {
+          "type": "integer"
+        },
+        "utilization.cpu.sockets": {
+          "type": "integer"
+        },
+        "utilization.temperature.package-id-1-f": {
+          "type": "float"
+        },
+        "utilization.cpu.min-mhz": {
+          "type": "float"
+        },
+        "utilization.cpu.family": {
+          "type": "integer"
+        },
+        "utilization.power.watts": {
+          "type": "float"
+        },
+        "utilization.bios.release-date": {
+          "format": "MM/dd/yyyy",
+          "type": "date"
+        },
+        "utilization.processor.version": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "utilization.power.amps": {
+          "type": "float"
+        },
+        "input.type": {
+          "type": "keyword"
+        },
+        "agent.hostname": {
+          "type": "keyword",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "utilization.loadavg.15m": {
+          "type": "float"
+        },
+        "utilization.memory.free-gb": {
+          "type": "float"
+        },
+        "utilization.cpu.idle-pct": {
+          "type": "float"
+        },
+        "agent.id": {
+          "type": "keyword"
+        },
+        "utilization.baseboard.serial-number": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "utilization.processor.frequency": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "utilization.cpu.op-modes": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "utilization.cpu.threads-per-core": {
+          "type": "integer"
+        },
+        "utilization.summary.system-free-pct": {
+          "type": "float"
+        },
+        "utilization.cpu.virtualization-type": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "utilization.system.version": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "utilization.cpu.vendor-id": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "agent.type": {
+          "type": "keyword"
+        },
+        "utilization.summary.cpu-used-pct": {
+          "type": "float"
+        },
+        "utilization.power.volts": {
+          "type": "float"
+        },
+        "utilization.cpu.max-mhz": {
+          "type": "float"
+        },
+        "utilization.chassis.version": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "utilization.memory.cached-kb": {
+          "type": "integer"
+        },
+        "utilization.memory.swap-total-kb": {
+          "type": "integer"
+        },
+        "utilization.temperature.package-id-0-c": {
+          "type": "float"
+        },
+        "utilization.loadavg.5m": {
+          "type": "float"
+        },
+        "utilization.memory.available-kb": {
+          "type": "integer"
+        },
+        "utilization.cpu.iowait-pct": {
+          "type": "float"
+        },
+        "utilization.temperature.package-id-0-f": {
+          "type": "float"
+        },
+        "utilization.memory.swap-free-gb": {
+          "type": "float"
+        },
+        "utilization.loadavg.processes.running": {
+          "type": "integer"
+        },
+        "utilization.loadavg.processes.total": {
+          "type": "integer"
+        },
+        "utilization.cpu.l2-cache-kb": {
+          "type": "integer"
+        },
+        "@timestamp": {
+          "type": "date"
+        },
+        "log.file.path": {
+          "type": "keyword"
+        },
+        "agent.ephemeral_id": {
+          "type": "keyword"
+        },
+        "utilization.memory.inactive-gb": {
+          "type": "float"
+        },
+        "utilization.cpu.virtualization": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "utilization.chassis.asset-tag": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "utilization.system.product-name": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "utilization.chassis.manufacturer": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "utilization.summary.memory-used-pct": {
+          "type": "float"
+        },
+        "utilization.cpu.l3-cache-kb": {
+          "type": "integer"
+        },
+        "host.name": {
+          "type": "keyword",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "utilization.memory.total-kb": {
+          "type": "integer"
+        },
+        "utilization.cpu.hyperthreaded": {
+          "type": "boolean"
+        },
+        "utilization.memory.active-gb": {
+          "type": "float"
+        },
+        "utilization.bios.version": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "utilization.memory.free-kb": {
+          "type": "integer"
+        },
+        "log.offset": {
+          "type": "integer"
+        },
+        "utilization.summary.cpu-free-pct": {
+          "type": "float"
+        },
+        "utilization.baseboard.version": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "utilization.summary.memory-free-pct": {
+          "type": "float"
+        },
+        "utilization.baseboard.manufacturer": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "utilization.cpu.steal-pct": {
+          "type": "float"
+        },
+        "ecs.version": {
+          "type": "keyword"
+        },
+        "utilization.cpu.vcpus": {
+          "type": "integer"
+        },
+        "utilization.cpu.model-name": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "agent.version": {
+          "type": "keyword"
+        },
+        "utilization.baseboard.product-name": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "utilization.cpu.usr-pct": {
+          "type": "float"
+        },
+        "utilization.chassis.type": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "utilization.cpu.gnice-pct": {
+          "type": "float"
+        },
+        "utilization.cpu.soft-pct": {
+          "type": "float"
+        },
+        "utilization.cpu.l1d-cache-kb": {
+          "type": "integer"
+        },
+        "utilization.chassis.serial-number": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "utilization.cpu.flags": {
+          "type": "keyword"
+        },
+        "utilization.cpu.cores-per-socket": {
+          "type": "integer"
+        },
+        "utilization.baseboard.asset-tag": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "utilization.loadavg.1m": {
+          "type": "float"
+        },
+        "utilization.cpu.nice-pct": {
+          "type": "float"
+        },
+        "utilization.memory.swap-free-kb": {
+          "type": "integer"
+        },
+        "utilization.bios.vendor": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "utilization.memory.cached-gb": {
+          "type": "float"
+        },
+        "utilization.memory.swap-total-gb": {
+          "type": "float"
+        },
+        "utilization.set.name": {
+          "type": "keyword"
+        },
+        "utilization.memory.available-gb": {
+          "type": "float"
+        },
+        "utilization.cpu.byte-order": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "utilization.cpu.sys-pct": {
+          "type": "float"
+        },
+        "utilization.cpu.l1i-cache-kb": {
+          "type": "integer"
+        },
+        "utilization.cpu.guest-pct": {
+          "type": "float"
+        },
+        "utilization.cpu.irq-pct": {
+          "type": "float"
+        },
+        "utilization.system.serial-number": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "utilization.memory.inactive-kb": {
+          "type": "integer"
+        },
+        "utilization.system.manufacturer": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "utilization.cpu.architecture": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        }
+      }
+    },
+    "aliases": {}
+  }
+}
