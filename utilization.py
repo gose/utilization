@@ -85,7 +85,7 @@ addInt('utilization.cpu.threads-per-core', "lscpu | grep Thread | awk -F '  ' '{
 
 # (custom lscpu entry)
 entry['utilization.cpu.hyperthreaded'] = False
-tpc = subprocess.getoutput("lscpu | grep Thread | awk -F '  ' '{print $2}'").strip()
+tpc = subprocess.getoutput("lscpu | grep Thread | awk -F ':[[:space:]]*' '{print $2}'").strip()
 if int(tpc) > 1:
     entry['utilization.cpu.hyperthreaded'] = True
 
@@ -172,16 +172,16 @@ entry['utilization.loadavg.processes.total'] = int(processes_total),
 
 # mpstat
 mpstat = subprocess.getoutput("mpstat | grep all").split()
-cpu_usr_pct = round(float(mpstat[3]) / 100, 2)
-cpu_nice_pct = round(float(mpstat[4]) / 100, 2)
-cpu_sys_pct = round(float(mpstat[5]) / 100, 2)
-cpu_iowait_pct = round(float(mpstat[6]) / 100, 2)
-cpu_irq_pct = round(float(mpstat[7]) / 100, 2)
-cpu_soft_pct = round(float(mpstat[8]) / 100, 2)
-cpu_steal_pct = round(float(mpstat[9]) / 100, 2)
-cpu_guest_pct = round(float(mpstat[10]) / 100, 2)
-cpu_gnice_pct = round(float(mpstat[11]) / 100, 2)
-cpu_idle_pct = round(float(mpstat[12]) / 100, 2)
+cpu_usr_pct = round(float(mpstat[2]) / 100, 2)
+cpu_nice_pct = round(float(mpstat[3]) / 100, 2)
+cpu_sys_pct = round(float(mpstat[4]) / 100, 2)
+cpu_iowait_pct = round(float(mpstat[5]) / 100, 2)
+cpu_irq_pct = round(float(mpstat[6]) / 100, 2)
+cpu_soft_pct = round(float(mpstat[7]) / 100, 2)
+cpu_steal_pct = round(float(mpstat[8]) / 100, 2)
+cpu_guest_pct = round(float(mpstat[9]) / 100, 2)
+cpu_gnice_pct = round(float(mpstat[10]) / 100, 2)
+cpu_idle_pct = round(float(mpstat[11]) / 100, 2)
 entry['utilization.cpu.usr-pct'] = cpu_usr_pct
 entry['utilization.cpu.nice-pct'] = cpu_nice_pct
 entry['utilization.cpu.sys-pct'] = cpu_sys_pct
